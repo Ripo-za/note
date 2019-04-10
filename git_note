@@ -10,3 +10,11 @@
 4、git commit --amend -m "xxxxx"  覆盖上一次提交（用来补交）
 5、git branch -vv  查看分支正在跟踪的远程分支。
 6、合并分支的时候要注意自己是从那个分支上合并的
+7、git pull时，如果存在多个分支时，如果执行这样的命令（想pull到lp分支）
+	git pull origin lp
+   这会报错没有指定分支，因为他不知道pull那个分支。
+   所以比如要把lp1分支pull到本地lp分支。要用这样的语句。
+   	git pull origin lp1:lp   注意这里远程分支写在前面。
+   而如果要是把lp分支push到lp1上，要把远程分支写在后面，如下面这样。
+	git push origin lp:lp1
+   总结一点是前面的覆盖后面的
