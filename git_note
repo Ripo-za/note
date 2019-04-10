@@ -1,0 +1,12 @@
+1、.gitignore 文件添加已经被跟踪的文件是无效的
+2.1、git diff 本身只显示尚未暂存的改动，而不是自上次提交以来所做的所有改动。 所以给把改动的文件提交后，执行git diff发现什么也没有，就是这个原因
+2.2、使用git diff --staged [file]就能查看暂存(staged)文件的修改，可以加文件名制定修改，也可以不加，显示所有暂存文件的修改。这点和git diff一样。
+
+3、  git mv README.md README  等价于
+	$ mv README.md README
+	$ git rm README.md
+	$ git add README
+
+4、git commit --amend -m "xxxxx"  覆盖上一次提交（用来补交）
+5、git branch -vv  查看分支正在跟踪的远程分支。
+6、合并分支的时候要注意自己是从那个分支上合并的
